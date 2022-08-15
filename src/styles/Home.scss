@@ -1,0 +1,22 @@
+
+@import './variables.scss';
+
+.home {
+    min-height: 100vh;
+    background-image: url('../assets/home/background-home-mobile.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    
+    @media (min-width: $tablet) {
+        background-image:  url('../assets/home/background-home-tablet.jpg');
+    }
+
+    @media(min-width: $desktop) {
+        background-image:  url('../assets/home/background-home-desktop.jpg');
+    }
+}
+
