@@ -1,0 +1,18 @@
+
+@import './variables.scss';
+
+.destination {
+    min-height: 100vh;
+    background-image: url('../assets/destination/background-destination-mobile.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    @media(min-width: $tablet) {
+        background-image: url('../assets/destination/background-destination-tablet.jpg');
+    }
+
+    @media(min-width: $desktop) {
+        background-image: url('../assets/destination/background-destination-desktop.jpg');
+    }
+
+}

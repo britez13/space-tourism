@@ -1,0 +1,19 @@
+
+
+@import './variables.scss';
+
+.technology {
+    min-height: 100vh;
+    background-image: url('../assets/technology/background-technology-mobile.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    @media(min-width: $tablet) {
+        background-image: url('../assets/technology//background-technology-tablet.jpg');
+    }
+
+    @media(min-width: $desktop) {
+        background-image: url('../assets/technology/background-technology-desktop.jpg');
+    }
+
+}
