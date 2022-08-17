@@ -6,6 +6,7 @@
     background-image: url('../assets/destination/background-destination-mobile.jpg');
     background-repeat: no-repeat;
     background-size: cover;
+    padding-top: 7rem;
 
     @media(min-width: $tablet) {
         background-image: url('../assets/destination/background-destination-tablet.jpg');
@@ -15,4 +16,166 @@
         background-image: url('../assets/destination/background-destination-desktop.jpg');
     }
 
+    &__subheading {
+        font-size: 1.6rem;
+        
+        span {
+            color: $light-skyblue;
+            padding-right: 1rem;
+        }
+ 
+        @media(min-width: $tablet) {
+            font-size: 2rem;
+            text-align: left;
+            margin-left: 5rem;
+        }
+
+        @media(min-width: $desktop) {
+            font-size: 2.8rem;
+            margin-left: 0;
+            margin-inline: auto;
+            max-width: 120rem;  
+        }
+    }
+
+    &__main-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        @media(min-width: $desktop) {
+            margin-top: 5rem;
+            flex-direction: row; 
+            justify-content: center;
+            gap: 10rem; 
+        }
+    } 
+
+    &__image-wrapper {
+        margin-block: 3rem;
+        width: 17rem;
+        height: 17rem;
+
+        @media(min-width: $tablet) {
+            width: 30rem;
+            height: 30rem;
+        } 
+
+        @media(min-width: $desktop) {
+            width: 40rem;
+            height: 40rem;
+        }
+    }
+
+    &__image {
+        width: 100%;
+        display: block;
+        object-fit: cover;
+    }
+
+    &__info {
+        max-width: 45rem;
+    }
+
+    &__heading {
+        font-size: 5.6rem;
+        margin-top: 2rem;
+
+        @media(min-width: $tablet) {
+            font-size: 8rem;
+        }
+
+        @media(min-width: $desktop) {
+            font-size: 10rem;
+            text-align: left;
+        }
+    }
+
+    &__description {
+        font-family: $secondary-font;
+        font-size: 1.5rem;
+        color: $light-skyblue;
+        width: min(80%, 50rem);
+        margin-inline: auto;
+        margin-top: 1rem;
+        line-height: 1.9rem; 
+        
+        @media(min-width: $tablet) {
+            font-size: 1.7rem;
+            max-width: 60rem;
+            line-height: 2.5rem;
+        }
+
+        @media(min-width: $desktop) {
+            font-size: 1.8rem;
+            max-width: 60rem;
+            line-height: 2.5rem;
+            text-align: left;
+            margin-inline: 0;
+        }
+    }
+
+    &__line {
+        display: block;
+        width: 90%;
+        height: .05rem;
+        background-color: $gray;
+        margin-inline: auto;
+        margin-block: 3.5rem;
+
+        @media(min-width: $desktop) {
+            max-width: 47rem;
+            margin-inline: 0;
+        }
+
+    }
+
+    &__extra-info {
+        display: flex;
+        flex-direction: column;
+
+        @media(min-width: $tablet) {
+            flex-direction: row;
+            justify-content: space-evenly;
+        }
+
+        @media(min-width: $desktop) {
+            flex-direction: row;
+            justify-content: flex-start;
+            gap: 8rem;
+        }
+    }
+
+    &__distance-heading, &__travel-heading {
+        font-size: 1.4rem;
+        color: $light-skyblue;
+        letter-spacing: .2rem;
+
+        @media(min-width: $desktop) {
+            text-align: left;
+        }
+    }
+
+    &__distance-value, &__travel-value {
+        font-size: 2.8rem;
+        margin-top: 1rem;
+
+        @media(min-width: $desktop) {
+            text-align: left;
+        }
+    }
+    
+    &__travel {
+        margin-top: 2.5rem;
+        @media(min-width: $tablet) {
+            margin-top: 0;
+        }
+
+    }
+
+   
+
 }
+
+
+

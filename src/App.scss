@@ -40,6 +40,19 @@ p {
 }
 
 
+li {
+    list-style: none;
+}
+
+
+a {
+    text-decoration: none;
+}
+
+a:hover, a:visited {
+    color: white;
+}
+
 
 // body {
 //     font-family: var(--primary-font);

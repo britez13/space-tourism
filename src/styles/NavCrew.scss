@@ -1,0 +1,15 @@
+
+import './variables';
+
+.crew-nav {
+    display: flex;
+    gap: 1rem;
+
+    &__list {
+        width: 1rem;
+        height: 1rem;
+        border-radius: 50%;
+        background-color: $white;
+    }
+
+}

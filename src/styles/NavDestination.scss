@@ -1,0 +1,49 @@
+
+@import './variables.scss';
+
+.destination-nav {
+    width: min(90%, 23.75rem);
+    margin-block: 0;
+    margin-inline: auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 1rem;
+    padding: 0;
+
+    @media(min-width: $desktop) {
+        margin-inline: 0;
+    } 
+
+    &__link {
+        font-size: 1.4rem;
+        font-family: $secondary-font;
+        text-transform: uppercase;
+        letter-spacing: .15rem;
+        color: $light-skyblue !important;
+
+        @media(min-width: $tablet) {
+            font-size: 1.6rem;
+        }
+
+        &--active {
+            font-size: 1.4rem;
+            font-family: $secondary-font;
+            text-transform: uppercase;
+            letter-spacing: .15rem;
+            text-decoration: underline;
+            text-decoration-thickness: .2rem;
+            text-underline-offset: .7rem;
+
+            @media(min-width: $tablet) {
+                font-size: 1.6rem;
+            }
+        }
+        
+    }
+
+}
+
+
+
+

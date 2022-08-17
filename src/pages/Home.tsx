@@ -1,4 +1,4 @@
-
+import { Link } from 'react-router-dom'
 import '../styles/Home.scss'
 
 const Home = (): JSX.Element  => {
@@ -14,7 +14,7 @@ const Home = (): JSX.Element  => {
             </p>
         </div>
         <div className='home__circle'>
-            <h3 className='home__explore'>Explore</h3>
+            <Link to='/destination/moon' className='home__explore'>Explore</Link>
         </div>
       </div>
       
