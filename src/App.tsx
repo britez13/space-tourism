@@ -19,7 +19,9 @@ function App() {
         <Route path='crew' element={<Crew />} >
           <Route path=':place' element={null} />
         </Route>
-        <Route path='technology' element={<Technology />} />
+        <Route path='technology' element={<Technology />} >
+          <Route path=':place' element={null} />
+        </Route>
       </Routes>
     </BrowserRouter>
   )

@@ -1,15 +1,42 @@
 
-import './variables';
+@import './variables';
 
 .crew-nav {
+    max-width: 8.8rem;
     display: flex;
-    gap: 1rem;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+    margin-block: 0;
+    margin-inline: auto;
 
-    &__list {
+    @media(min-width: $desktop) {
+        margin-inline: 0;
+    }
+
+    // &__list {
+    //     width: 2rem;
+    //     height: 2rem;
+    //     border-radius: 50%;
+    //     background-color: red !important;
+    // }
+
+    &__link {
         width: 1rem;
         height: 1rem;
         border-radius: 50%;
-        background-color: $white;
+        background-color: $medium-gray !important;
+        cursor: pointer;
+        position: absolute;
+
+        &__active {
+            width: 1rem;
+            height: 1rem;
+            border-radius: 50%;
+            cursor: pointer;
+            // position: absolute;
+            background-color: $white !important;
+        }
     }
 
 }
