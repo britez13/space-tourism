@@ -8,19 +8,19 @@ const NavDestination = () => {
             <li className='destination-nav__list'>
                 <NavLink 
                 className={({ isActive }) =>
-              isActive ? 'destination-nav__link--active'   : 'destination-nav__link'}  to='/destination/moon'>Moon</NavLink>
+              isActive ? 'destination-nav__link--active' : 'destination-nav__link'}  to='/destination/moon'>Moon</NavLink>
             </li>
             <li>
                 <NavLink className={({ isActive }) =>
-              isActive ? 'destination-nav__link--active'   : 'destination-nav__link'}  to='/destination/mars'>Mars</NavLink>
+              isActive ? 'destination-nav__link--active' : 'destination-nav__link'}  to='/destination/mars'>Mars</NavLink>
             </li>
             <li>
                 <NavLink className={({ isActive }) =>
-              isActive ? 'destination-nav__link--active'   : 'destination-nav__link'}  to='/destination/europa'>Europa</NavLink>
+              isActive ? 'destination-nav__link--active' : 'destination-nav__link'}  to='/destination/europa'>Europa</NavLink>
             </li>
             <li>
                 <NavLink className={({ isActive }) =>
-              isActive ? 'destination-nav__link--active'   : 'destination-nav__link'} to='/destination/titan'>Titan</NavLink>
+              isActive ? 'destination-nav__link--active' : 'destination-nav__link'} to='/destination/titan'>Titan</NavLink>
             </li>
         </ul>
     </nav>)

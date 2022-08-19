@@ -40,6 +40,7 @@
     }
 
     &__main-wrapper {
+        
         @media(min-width: $desktop) {
             display: flex;
             flex-direction: row-reverse;
@@ -67,6 +68,11 @@
 
     &__secondary-wrapper {
         display: flex;
+        flex-direction: column;
+
+        @media(min-width: $desktop) {
+            flex-direction: row;
+        }
     }
  
     &__info {

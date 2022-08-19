@@ -10,7 +10,6 @@ const Crew = () => {
   const {place} = useParams()
   const defaultCrew = crews[0];
   const crew = crews.find( item => item.name.substring(0, item.name.indexOf(' ')).toLowerCase() === place) || defaultCrew
-  console.log(crew);
   
   return (
     <section className='crew'>

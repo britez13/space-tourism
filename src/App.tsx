@@ -4,6 +4,7 @@ import Destination from './pages/Destination'
 import Crew from './pages/Crew'
 import Technology from './pages/Technology'
 import './App.scss'
+import Navbar from './components/Header'
 
 
 
@@ -11,6 +12,7 @@ function App() {
 
   return (
     <BrowserRouter>
+      <Navbar />
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='destination' element={<Destination />} >
