@@ -17,6 +17,18 @@ body {
     display: block;
     color: $white;
     overflow-x: hidden;
+    // background-image: url('./assets/home/background-home-mobile.jpg');
+    // background-size: cover;
+    // background-repeat: no-repeat;
+    
+    // @media (min-width: $tablet) {
+    //     background-image:  url('./assets/home/background-home-tablet.jpg');
+    // }
+
+    // @media(min-width: $desktop) {
+    //     background-image:  url('./assets/home/background-home-desktop.jpg');
+    // }
+
 }
 
 h1, h2, h3,h4, h5 {

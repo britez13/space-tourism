@@ -2,6 +2,20 @@
 
 @import './variables.scss';
 
+// body {
+//     background-image: url('../../src/assets/technology/background-technology-mobile.jpg') !important;
+//     background-size: cover;
+//     background-repeat: no-repeat;
+
+//     @media (min-width: $tablet) {
+//         background-image:  url('../assets/technology/background-technology-tablet.jpg');
+//     }
+
+//     @media(min-width: $desktop) {
+//         background-image:  url('../assets/technology/background-technology-desktop.jpg');
+//     }
+// }
+
 .technology {
     min-height: 100vh;
     background-image: url('../assets/technology/background-technology-mobile.jpg');
@@ -9,7 +23,7 @@
     background-size: cover;
 
     @media(min-width: $tablet) {
-        background-image: url('../assets/technology//background-technology-tablet.jpg');
+        background-image: url('../assets/technology/background-technology-tablet.jpg');
     }
 
     @media(min-width: $desktop) {

@@ -4,7 +4,7 @@ import Destination from './pages/Destination'
 import Crew from './pages/Crew'
 import Technology from './pages/Technology'
 import './App.scss'
-import Navbar from './components/Header'
+import Header from './components/Header'
 
 
 
@@ -12,17 +12,18 @@ function App() {
 
   return (
     <BrowserRouter>
-      <Navbar />
       <Routes>
-        <Route path='/' element={<Home />} />
-        <Route path='destination' element={<Destination />} >
-          <Route path=':place' element={null} />
-        </Route>
-        <Route path='crew' element={<Crew />} >
-          <Route path=':place' element={null} />
-        </Route>
-        <Route path='technology' element={<Technology />} >
-          <Route path=':place' element={null} />
+        <Route path='/' element={<Header />}>
+          <Route index element={<Home />} />
+          <Route path='destination' element={<Destination />} >
+            <Route path=':place' element={null} />
+          </Route>
+          <Route path='crew' element={<Crew />} >
+            <Route path=':place' element={null} />
+          </Route>
+          <Route path='technology' element={<Technology />} >
+            <Route path=':place' element={null} />
+          </Route>
         </Route>
       </Routes>
     </BrowserRouter>
