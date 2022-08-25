@@ -4,6 +4,7 @@ import NavDestination from '../components/NavDestination';
 import { useParams } from 'react-router-dom';
 
 import '../styles/Destination.scss'
+import Header from '../components/Header';
 
 const destinations = data.destinations;
 
@@ -16,6 +17,7 @@ const Destination = () => {
   
   return (
     <section className='destination'>
+      <Header />
       <h5 className='destination__subheading'><span>01</span>Pick your destination</h5>
       <div className='destination__main-wrapper'>
         <picture className='destination__image-wrapper'>

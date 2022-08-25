@@ -6,7 +6,7 @@
     background-image: url('../assets/destination/background-destination-mobile.jpg');
     background-repeat: no-repeat;
     background-size: cover;
-    padding-top: 7rem;
+    // padding-top: 7rem;
 
     @media(min-width: $tablet) {
         background-image: url('../assets/destination/background-destination-tablet.jpg');
@@ -18,9 +18,12 @@
 
     &__subheading {
         font-size: 1.6rem;
+        letter-spacing: .25rem;
+        margin-top: 2rem;
         
         span {
-            color: $light-skyblue;
+            font-weight: 700;
+            color: $medium-gray;
             padding-right: 1rem;
         }
  
@@ -28,13 +31,20 @@
             font-size: 2rem;
             text-align: left;
             margin-left: 5rem;
+            letter-spacing: .3rem;
+            margin-top: 2rem;
         }
 
         @media(min-width: $desktop) {
-            font-size: 2.8rem;
-            margin-left: 0;
-            margin-inline: auto;
+            margin-left: 13rem;
             max-width: 120rem;  
+        }
+
+        @media(min-width: $lg-desktop) {
+            font-size: 2.8rem;
+            letter-spacing: .4rem;
+            margin-top: clamp(5rem, 5vw, 10rem); 
+            margin-left: 15rem; 
         }
     }
 
@@ -61,7 +71,12 @@
             height: 30rem;
         } 
 
-        @media(min-width: $desktop) {
+        // @media(min-width: $desktop) {
+        //     width: 33rem;
+        //     height: 33rem;
+        // }
+
+        @media(min-width: $lg-desktop) {
             width: 40rem;
             height: 40rem;
         }
@@ -80,20 +95,23 @@
     &__heading {
         font-size: 5.6rem;
         margin-top: 2rem;
+        text-align: center;
 
         @media(min-width: $tablet) {
             font-size: 8rem;
         }
 
         @media(min-width: $desktop) {
-            font-size: 10rem;
             text-align: left;
+        }
+
+        @media(min-width: $lg-desktop) {
+            font-size: 10rem;
         }
     }
 
     &__description {
-        font-family: $secondary-font;
-        font-size: 1.5rem;
+        font-family: $tertiary-font;
         color: $light-skyblue;
         width: min(80%, 50rem);
         margin-inline: auto;
@@ -101,17 +119,23 @@
         line-height: 1.9rem; 
         
         @media(min-width: $tablet) {
-            font-size: 1.7rem;
+            font-size: 1.6rem;
             max-width: 60rem;
             line-height: 2.5rem;
         }
 
         @media(min-width: $desktop) {
-            font-size: 1.8rem;
             max-width: 60rem;
+            width: 85%;
             line-height: 2.5rem;
             text-align: left;
             margin-inline: 0;
+        }
+
+        @media(min-width: $lg-desktop) {
+            font-size: 1.8rem;
+            width: 100%;
+            max-width: 70rem;
         }
     }
 
@@ -126,6 +150,10 @@
         @media(min-width: $desktop) {
             max-width: 47rem;
             margin-inline: 0;
+        }
+
+        @media(min-width: $lg-desktop) {
+            width: 100%;
         }
 
     }
@@ -149,7 +177,7 @@
     &__distance-heading, &__travel-heading {
         font-size: 1.4rem;
         color: $light-skyblue;
-        letter-spacing: .2rem;
+        letter-spacing: .25rem;
 
         @media(min-width: $desktop) {
             text-align: left;

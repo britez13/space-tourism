@@ -1,6 +1,7 @@
 
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
+import Header from '../components/Header';
 import NavTechnology from '../components/NavTechnology';
 import data from '../data.json';
 import '../styles/Technology.scss'
@@ -40,6 +41,7 @@ const Technology = () => {
 
   return (
     <section className='technology'>
+      <Header />
       <h5 className='technology__subheading'><span>03</span>Space launch 101</h5>
       <div className='technology__main-wrapper'>
         <img className='technology__image' src={windowWidth.innerWidth > DESKTOP_BREAKPOINT ? technology.images.portrait  : technology.images.landscape} alt={technology.name} />

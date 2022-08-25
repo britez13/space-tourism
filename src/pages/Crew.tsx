@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom';
 import data from '../data.json';
 import NavCrew from '../components/NavCrew';
 import '../styles/Crew.scss';
+import Header from '../components/Header';
 
 const crews = data.crew;
 
@@ -13,6 +14,7 @@ const Crew = () => {
   
   return (
     <section className='crew'>
+      <Header />
       <h5 className='crew__subheading'><span>02</span>Meet your crew</h5>
       <div className='crew__main-wrapper'>
         <picture className='crew__image-wrapper'>

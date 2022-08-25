@@ -2,17 +2,18 @@
 @import './variables.scss';
 
 .header {
-    // position: absolute;
-    // z-index: 10;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: black;
+    background-color: transparent;
     padding-top: 2rem;
  
     
     @media(min-width: $desktop) {
+        padding-top: 2.5rem;
+
        &__logo {
+            margin-left: 3rem;
             margin-right: 5rem;
        }
         
@@ -22,18 +23,22 @@
             display: block;
             position: relative;
             width: 100%;
-            height: 1px;
+            height: .1px;
             margin-right: -3rem;
-            background-color: $medium-gray;
+            background-color: #383b4b;
             order: 1;
         }
 
         .navbar__main {
             order: 2;
         }
-
     }
 
+    @media(min-width: $lg-desktop) {
+        padding-top: 3.5rem;
+    }
+
+ 
 
     &__logo-wrapper {
         margin-left: 2rem;
@@ -43,10 +48,10 @@
 
 .navbar {
     margin: 0;
-    padding: 4rem 5rem;
-    background-color: hsl(0 0% 100% / .1 );
+    padding: 2.5rem clamp(3rem, 8vw, 15rem);
+    background-color: rgba(255, 255, 255, 0.04);
     position: relative;
-    backdrop-filter: blur(2rem);
+    backdrop-filter: blur(81.5485px);
     display: flex;
     gap: 2.5rem;
 
@@ -94,13 +99,14 @@
         }
     }
 
-    // @media(min-width: $desktop) {
-    //    order: 2; 
-    // }
+    @media(min-width: $desktop) {
+       gap: 5rem; 
+    }
 
-
-
-    
+    @media(min-width: $lg-desktop) {
+        padding-block: 4rem; 
+    }
+ 
     &__list{   
         & span {
             @media (min-width: $tablet) and (max-width: $desktop) {
@@ -131,6 +137,10 @@
             color: $white;
             text-transform: uppercase;
             letter-spacing: .25rem;
+            text-decoration: underline;
+            text-decoration-color: $white;
+            text-decoration-line: 1rem;
+        
 
             & span {
                 font-weight: 700;

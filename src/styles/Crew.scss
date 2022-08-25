@@ -1,24 +1,7 @@
 
 @import './variables.scss';
 
-// body {
-//     min-height: 100vh;
-//     background-image: url('../assets/crew/background-crew-mobile.jpg');
-//     background-repeat: no-repeat;
-//     background-size: cover;
-
-//     @media(min-width: $tablet) {
-//         background-image: url('../assets/crew/background-crew-tablet.jpg');
-//     }
-
-//     @media(min-width: $desktop) {
-//         background-image: url('../assets/crew/background-crew-desktop.jpg');
-//     }
-// }
-
 .crew {
-    // position: absolute;
-    // inset: 0 0 0 0;
     min-height: 100vh;
     background-image: url('../assets/crew/background-crew-mobile.jpg');
     background-repeat: no-repeat;
@@ -34,7 +17,8 @@
 
     &__subheading {
         font-size: 1.6rem;
-        padding-top: 5rem;
+        letter-spacing: .25rem;
+        margin-top: 2rem;
 
         span {
             color: $light-skyblue;
@@ -65,7 +49,7 @@
             flex-direction: column-reverse;
             justify-content: space-between;
             gap: 10rem;
-            margin-top: 10rem;
+            margin-top: 3rem;
         }
 
         @media(min-width: $desktop ) {
@@ -81,19 +65,27 @@
 
     &__image-wrapper {
         width: 32.7rem;
+        height: 22.3rem;
         margin-top: 3rem;
         border-bottom: 1.5px solid $gray;
-        flex-grow: 2;
-
+        
         @media(min-width: $tablet ) {
             width: 45.6rem;
+            height: 57.2rem;
             margin-top: 0;
-        }    
+        } 
+
+        @media(min-width: $lg-desktop ) {
+            width: 56.8rem;
+            height: 71.2rem;
+            margin-top: 0;
+            flex-grow: 1;
+        }   
     }
 
     &__image {
         width: 100%;
-        height: auto;
+        height: 100%;
         object-fit: contain;
         display: block;
         padding-left: 1rem;
@@ -107,22 +99,14 @@
     &__secondary-wrapper {
         display: flex;
         flex-direction: column-reverse;
-        gap: 2rem;
-        flex-grow: 1;
+        gap: .5rem;
 
         @media(min-width: $tablet)  {
             flex-direction: column;
         }
     }
  
-    // &__info {
-    //     @media(min-width: $tablet)  {
-    //         grid-row: 1/2; 
-    //     }
-    // }
-
     &__role {
-        font-size: 1.6rem;
         color: $light-skyblue;
 
         @media(min-width: $tablet)  {
@@ -156,12 +140,13 @@
         line-height: 2rem;
 
         @media(min-width: $tablet)  {
-            font-size: 1.7rem; 
+            font-size: 1.6rem; 
         }
 
         @media(min-width: $desktop)  {
             text-align: left;
             margin-inline: 0; 
+            max-width: 44.4rem;
         }
     }
 
