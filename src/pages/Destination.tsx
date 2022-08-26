@@ -2,7 +2,7 @@
 import data from '../data.json';
 import NavDestination from '../components/NavDestination';
 import { useParams } from 'react-router-dom';
-
+import { motion } from 'framer-motion';
 import '../styles/Destination.scss'
 import Header from '../components/Header';
 
@@ -10,9 +10,9 @@ const destinations = data.destinations;
 
 const Destination = () => {
 
-  const {place} = useParams()
+  const {id} = useParams()
   const defualtDestination = destinations[0]
-  const destination = destinations.find( item => item.name.toLowerCase() === place) || defualtDestination
+  const destination = destinations.find( item => item.name.toLowerCase() === id) || defualtDestination
     
   
   return (
@@ -20,10 +20,14 @@ const Destination = () => {
       <Header />
       <h5 className='destination__subheading'><span>01</span>Pick your destination</h5>
       <div className='destination__main-wrapper'>
-        <picture className='destination__image-wrapper'>
+        <motion.picture className='destination__image-wrapper'
+         initial={{ x: -100 }}
+         animate={{ x: 0 }} 
+         transition={{ ease: "easeOut", duration: 1.5 }}
+        >
           <source srcSet={destination.images.webp} type='image/webp' />
           <img className='destination__image' src={destination.images.png} alt={destination.name} />
-        </picture>
+        </motion.picture>
         <div className='destination__info'>
           <NavDestination />
           <h2 className='destination__heading'>{destination.name}</h2>

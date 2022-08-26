@@ -1,5 +1,5 @@
 
-import { useState, useRef } from "react";
+import { useRef } from "react";
 import { NavLink, Outlet } from "react-router-dom";
 import '../styles/Header.scss'
 
@@ -7,10 +7,6 @@ const Header = () => {
 
     const ref1: any = useRef(null);
     const ref2: any = useRef(null);
-    // const [isVisible, setIsVisible] = useState(false)
-
-    
-    
 
     const handleClick = (e: any) => {
         if(ref1.current.getAttribute('data-nav-visible') === 'false') {
@@ -22,10 +18,6 @@ const Header = () => {
             ref1.current.setAttribute('data-nav-visible', 'false')
             ref2.current.setAttribute('data-button', 'open')
         }
-        // console.log(ref.current.getAttribute('data-nav-visible'));
-        // ref.current.setAttribute('data-nav-visible', 'true')
-        // console.log(ref.current.getAttribute('data-nav-visible'));
-        // // ref.current.attributes["data-nav-visible"] = "true";
     }
 
   return (
@@ -43,15 +35,15 @@ const Header = () => {
                     </li>
                     <li className="navbar__list">
                         <NavLink className={({ isActive }) =>
-                    isActive ? 'navbar__link--active' : 'navbar__link'} to='/destination/moon'><span>01</span>Destination</NavLink>
+                    isActive ? 'navbar__link--active' : 'navbar__link'} to='/destination'><span>01</span>Destination</NavLink>
                     </li>
                     <li className="navbar__list">
                         <NavLink className={({ isActive }) =>
-                    isActive ? 'navbar__link--active' : 'navbar__link'} to='/crew/douglas'><span>02</span>Crew</NavLink>
+                    isActive ? 'navbar__link--active' : 'navbar__link'} to='/crew'><span>02</span>Crew</NavLink>
                     </li>
                     <li className="navbar__list">
                         <NavLink className={({ isActive }) =>
-                    isActive ? 'navbar__link--active' : 'navbar__link'} to='/technology/launch'><span>04</span>Technology</NavLink>
+                    isActive ? 'navbar__link--active' : 'navbar__link'} to='/technology'><span>04</span>Technology</NavLink>
                     </li>
                 </ul>
             </nav>

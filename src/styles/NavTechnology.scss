@@ -8,7 +8,7 @@
     justify-content: center;
     padding: 0;
     
-    @media(min-width: $tablet) {
+    @media(min-width: $desktop) {
         flex-direction: column;
     }
 
@@ -20,6 +20,10 @@
         display: flex;
         justify-content: center;
         align-items: center;
+
+        &:hover {
+            border: 1px solid $medium-gray;
+        }
         
         & span {
             font-family: $primary-font;
@@ -30,7 +34,7 @@
                 font-size: 2.4rem;
             }
 
-            @media(min-width: $desktop) {
+            @media(min-width: $lg-desktop) {
                 font-size: 3.2rem;
             }
         }
@@ -40,7 +44,7 @@
             height: 5.8rem;
         }
 
-        @media(min-width: $desktop) {
+        @media(min-width: $lg-desktop) {
             width: 8rem;
             height: 8rem;
         }
@@ -75,7 +79,7 @@
                 height: 5.8rem;
             }
 
-            @media(min-width: $desktop) {
+            @media(min-width: $lg-desktop) {
                 width: 8rem;
                 height: 8rem;
             }

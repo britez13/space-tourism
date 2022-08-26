@@ -1,4 +1,4 @@
-
+import { motion } from 'framer-motion';
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import Header from '../components/Header';
@@ -11,11 +11,11 @@ const DESKTOP_BREAKPOINT = 768;
 
 const Technology = () => {
 
-  const {place} = useParams()
+  const {id} = useParams()
   const defaultTechnology = technologies[0];
-  let technology = technologies.find( item => item.name.substring(0, item.name.indexOf(' ')).toLowerCase() === place) || defaultTechnology
+  let technology = technologies.find( item => item.name.substring(0, item.name.indexOf(' ')).toLowerCase() === id) || defaultTechnology
 
-  if(place === 'spaceport') {
+  if(id === 'spaceport') {
     technology = technologies[1];
   }
 
@@ -42,9 +42,14 @@ const Technology = () => {
   return (
     <section className='technology'>
       <Header />
-      <h5 className='technology__subheading'><span>03</span>Space launch 101</h5>
+      <h5 className='technology__subheading'> <span>03</span>Space launch 101</h5>
       <div className='technology__main-wrapper'>
-        <img className='technology__image' src={windowWidth.innerWidth > DESKTOP_BREAKPOINT ? technology.images.portrait  : technology.images.landscape} alt={technology.name} />
+        <motion.img className='technology__image' src={windowWidth.innerWidth > DESKTOP_BREAKPOINT ? technology.images.portrait  : technology.images.landscape} 
+        alt={technology.name}
+         initial={{ x: 100 }}
+         animate={{ x: 0 }} 
+         transition={{ ease: "easeOut", duration: 1.5 }} 
+        />
         <div className='technology__secondary-wrapper'>
           <NavTechnology />
           <div className='technology__info'>

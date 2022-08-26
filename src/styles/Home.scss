@@ -36,10 +36,11 @@
             justify-content: space-between;
             align-items: flex-end;
             max-width: 130rem;
+            padding-top: clamp(5rem, 18vh, 18rem);    
         }
 
         @media(min-width: $lg-desktop) {
-            padding-top: clamp(5rem, 26vh, 25rem);    
+            padding-top: clamp(5rem, 24vh, 22rem);    
         }
     }
 
@@ -48,6 +49,10 @@
         flex-direction: column;
         gap: 2.2rem;
         max-width: 45rem;
+
+        @media(min-width: $lg-desktop) {
+            gap: 2.5rem;
+        }
     }
 
     &__subheading {
@@ -63,8 +68,6 @@
             font-size: 2.8rem;
             text-align: start;
         }
-
-
     }
 
     &__heading {
@@ -99,6 +102,7 @@
 
     &__explore {
         font-family: $primary-font !important;
+        font-size: 2rem;
         color: black !important;
         text-transform: uppercase;
         width: 15rem;
@@ -109,17 +113,24 @@
         align-items: center;
         justify-content: center;
         cursor: pointer;
-        
+        transition: outline 400ms ease-in-out;
+
         @media(min-width: $tablet) {
+            font-size: 3.2rem;
             width: 24.2rem;
             height: 24.2rem;
         }
 
         @media(min-width: $desktop) {
-            font-size: 3.2rem;
             width: 27.4rem;
             height: 27.4rem;
+
+            &:hover {
+                outline: 5rem solid $opacity-gray;
+            }
+            
         }
+
     }
 
 }

@@ -15,13 +15,13 @@ function App() {
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='destination' element={<Destination />} >
-        <Route path=':place' element={null} />
+        <Route path=':id' element={null} />
         </Route>
         <Route path='crew' element={<Crew />} >
-          <Route path=':place' element={null} />
+          <Route path=':id' element={null} />
         </Route>
         <Route path='technology' element={<Technology />} >
-          <Route path=':place' element={null} />
+          <Route path=':id' element={null} />
         </Route>
       </Routes>
     </BrowserRouter>

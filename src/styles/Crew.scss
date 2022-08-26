@@ -27,15 +27,21 @@
  
         @media(min-width: $tablet) {
             font-size: 2rem;
+            letter-spacing: .3rem;
             text-align: left;
             margin-left: 5rem;
         }
 
         @media(min-width: $desktop) {
-            font-size: 2.8rem;
-            margin-left: 0;
-            margin-inline: auto;
+            margin-left: 13rem;
             max-width: 120rem;  
+        }
+
+        @media(min-width: $lg-desktop) {
+            font-size: 2.8rem;
+            letter-spacing: .4rem;
+            margin-top: clamp(5rem, 5vw, 10rem); 
+            margin-left: 15rem; 
         }
     }
 
@@ -48,7 +54,7 @@
         @media(min-width: $tablet ) {
             flex-direction: column-reverse;
             justify-content: space-between;
-            gap: 10rem;
+            gap: 8rem;
             margin-top: 3rem;
         }
 
@@ -73,6 +79,10 @@
             width: 45.6rem;
             height: 57.2rem;
             margin-top: 0;
+        } 
+
+        @media(min-width: $desktop ) {
+            border-bottom: none;
         } 
 
         @media(min-width: $lg-desktop ) {
@@ -116,11 +126,16 @@
         @media(min-width: $desktop)  {
             text-align: left; 
         }
+
+        @media(min-width: $lg-desktop)  {
+            font-size: 3.2rem; 
+        }
     }
     
     &__name {
         font-size: 2.4rem;
         margin-top: .5rem;
+        width: 100%;
 
         @media(min-width: $tablet)  {
             font-size: 4rem; 
@@ -128,6 +143,10 @@
 
         @media(min-width: $desktop)  {
             text-align: left; 
+        }
+
+        @media(min-width: $lg-desktop)  {
+            font-size: 4.49rem; 
         }
     }
 
@@ -147,6 +166,13 @@
             text-align: left;
             margin-inline: 0; 
             max-width: 44.4rem;
+        }
+
+        @media(min-width: $lg-desktop)  {
+            font-size: 1.8rem;
+            max-width: 55rem; 
+            line-height: 2.5rem;
+            
         }
     }
 

@@ -2,20 +2,6 @@
 
 @import './variables.scss';
 
-// body {
-//     background-image: url('../../src/assets/technology/background-technology-mobile.jpg') !important;
-//     background-size: cover;
-//     background-repeat: no-repeat;
-
-//     @media (min-width: $tablet) {
-//         background-image:  url('../assets/technology/background-technology-tablet.jpg');
-//     }
-
-//     @media(min-width: $desktop) {
-//         background-image:  url('../assets/technology/background-technology-desktop.jpg');
-//     }
-// }
-
 .technology {
     min-height: 100vh;
     background-image: url('../assets/technology/background-technology-mobile.jpg');
@@ -32,7 +18,8 @@
 
     &__subheading {
         font-size: 1.6rem;
-        padding-top: 7rem;
+        margin-top: 2rem;
+        letter-spacing: .25rem;
         
         span {
             color: $light-skyblue;
@@ -43,21 +30,30 @@
             font-size: 2rem;
             text-align: left;
             margin-left: 5rem;
+            letter-spacing: .3rem;
         }
 
         @media(min-width: $desktop) {
-            font-size: 2.8rem;
-            margin-left: 0;
-            margin-inline: auto;
+            margin-left: 13rem;
             max-width: 120rem;  
+        }
+
+        @media(min-width: $lg-desktop) {
+            font-size: 2.8rem;
+            letter-spacing: .4rem;
+            margin-top: clamp(5rem, 5vw, 10rem); 
+            margin-left: 15rem; 
         }
     }
 
     &__main-wrapper {
         
         @media(min-width: $desktop) {
+            margin-inline: auto;
+            max-width: 110rem;
             display: flex;
             flex-direction: row-reverse;
+            justify-content: space-around;
             align-items: center;
         }
     }
@@ -74,7 +70,12 @@
         }
 
         @media(min-width: $desktop) {
-            width: 40%;
+            width: 41.5rem;
+            height: 42.7rem;
+        }
+
+        @media(min-width: $lg-desktop) {
+            width: 51.5rem;
             height: 52.7rem;
             background-image: url('../assets/technology/image-launch-vehicle-portrait.jpg');
         }
@@ -83,9 +84,11 @@
     &__secondary-wrapper {
         display: flex;
         flex-direction: column;
+        align-items: center;
 
         @media(min-width: $desktop) {
             flex-direction: row;
+            gap: 5rem;
         }
     }
  
@@ -98,9 +101,11 @@
         font-size: 1.4rem;
         color: $light-skyblue;
         margin-top: 2rem;
+        letter-spacing: .2rem;
 
         @media(min-width: $desktop) {
             text-align: left;
+            letter-spacing: .3rem;
         }
     }  
     
@@ -117,6 +122,9 @@
             text-align: left;
        }
 
+       @media(min-width: $lg-desktop) {
+        font-size: 5.1rem;
+        }
     } 
 
     &__description {
@@ -132,8 +140,13 @@
         }
 
         @media(min-width: $desktop) {
+            text-align: start;
             margin-inline: 0;
             margin: 0 !important;
+        }
+
+        @media(min-width: $desktop) {
+            line-height: 3rem;
         }
     } 
  
